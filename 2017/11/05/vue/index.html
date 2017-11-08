@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="vue," />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="码圈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="源码以大多数人的努力程度之低，没必要拼天赋哟 技术栈vue2-webpack-vuex-vueRouter-flex-svg 问题 id=app、router-view标签为什么在根目录的index.html页面和App.vue文件中重复出现两次 代理的饿了吗后台好像不太稳定，有时候会出现请求失败，状态码为430 @import “@/style/mixin”报错(url-loader与webap">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模仿vue-elm项目心得">
+<meta property="og:url" content="http://yoursite.com/2017/11/05/vue/index.html">
+<meta property="og:site_name" content="码圈">
+<meta property="og:description" content="源码以大多数人的努力程度之低，没必要拼天赋哟 技术栈vue2-webpack-vuex-vueRouter-flex-svg 问题 id=app、router-view标签为什么在根目录的index.html页面和App.vue文件中重复出现两次 代理的饿了吗后台好像不太稳定，有时候会出现请求失败，状态码为430 @import “@/style/mixin”报错(url-loader与webap">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-08T01:07:25.085Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="模仿vue-elm项目心得">
+<meta name="twitter:description" content="源码以大多数人的努力程度之低，没必要拼天赋哟 技术栈vue2-webpack-vuex-vueRouter-flex-svg 问题 id=app、router-view标签为什么在根目录的index.html页面和App.vue文件中重复出现两次 代理的饿了吗后台好像不太稳定，有时候会出现请求失败，状态码为430 @import “@/style/mixin”报错(url-loader与webap">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/05/vue/"/>
+
+
+
+
+
+  <title>模仿vue-elm项目心得 | 码圈</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">码圈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">太卑微，就努力踮起脚尖</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/05/vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joyeux">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码圈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">模仿vue-elm项目心得</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T23:54:48+08:00">
+                2017-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://github.com/bailicangdu/vue2-elm" target="_blank" rel="external">源码</a><br>以大多数人的努力程度之低，没必要拼天赋哟</p>
+<h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><p>vue2-webpack-vuex-vueRouter-flex-svg</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>id=app、router-view标签为什么在根目录的index.html页面和App.vue文件中重复出现两次</li>
+<li>代理的饿了吗后台好像不太稳定，有时候会出现请求失败，状态码为430</li>
+<li>@import “@/style/mixin”报错(url-loader与webapck的alias是两种不同的url解析方式???)</li>
+<li>vue代码进行调试的时候，总感觉有些卡顿</li>
+<li>router的模式为history的时候，会影响回退页面的滚动条的起始位置(样式异常),切换为hash模式就好了</li>
+<li>目前发现v-bind指令可以将data返回的属性值绑定到标签属性上</li>
+<li>目前发现v-on指令可以触发监听的函数方法<br><br>1.methods对象中定义的函数方法<br><br>2.原生DOM事件，如表单的submit动作，阻止表单的默认提交–&gt; v-on:submit.prevent<br></li>
+</ul>
+<h3 id="vue知识点"><a href="#vue知识点" class="headerlink" title="vue知识点"></a>vue知识点</h3><ul>
+<li><p><code>hash</code>与<code>history</code>两种模式的区别<br><br><code>hash</code>模式路由地址会带上#,但是浏览器发送给服务器的却是#之前的URL。hash模式的好处是，虽然你是个单页面应用，但是你可以只刷新当前页，而不必刷新整个单页面应用。<br><br><code>history</code>模式的话需要服务端配合，如果服务器配置仅仅是找不到对应的路由，就会重定向到index.html，那么刷新当前页会跳首页。如果服务器对于匹配不到URL不做配置，那么一般返回404页面。</p>
+</li>
+<li><p><code>v-for</code>指令可用于遍历数组和对象。<br><br>遍历数组时： <code>(item,index) in arr</code><br><br>遍历对象时： <code>(value,key,index) in obj</code><br></p>
+</li>
+<li><p><code>slot</code>标签用于父组件向子组件分发想要显示的内容。<br><br>使用场景:几个父组件公用一个子组件，且想要该子组件在不同的父组件中显示不同的内容。</p>
+</li>
+<li><p><code>v-model</code>用于绑定表单控件元素，如<code>input、textarea、select</code><br><br>1.<code>textarea/input[type=text]</code>，将data返回的属性值双向绑定到input的value属性上<br><br>2.<code>input[type=checkbox]/input[type=radio]/select-option</code><br><br>a.以上元素有value属性时，将data返回的属性值双向绑定到input的value属性上<br><br>b.以上元素无value属性时，将data返回的属性值双向绑定到以上元素是否被选中，选中为true，未选中为false<br></p>
+</li>
+<li><p><code>v-if/v-show/slot</code>标签都不会在文档排版中占位置，即不会像opacity样式那样占位置。</p>
+</li>
+<li><p><code>v-if</code>与<code>v-show</code>区别<br><br><code>v-show</code> 会在app初始化的时候编译并且渲染，并且在之后一直存在。当切换v-show模块时，只是简单的更改css。<br><br><code>v-if</code> 当切换v-if模块时，Vue.js 有一个局部编译/卸载过程，因为 v-if 之中的模板也可能包括数据绑定或子组件。v-if 是真实的条件渲染，因为它会确保条件块在切换当中合适地销毁与重建条件块内的事件监听器和子组件。 v-if 是惰性的，如果为false，则什么也不错-不编译，不渲染。 当第一次条件为真时，才开始编译。<br>#####建议#####<br><code>v-show</code>的切换消耗比较低，但是不会重新渲染子组件，所以最好用于静态的内容或者不需要重新构建结构的组件。而 v-if 比较适合不太频繁的切换状态的组件。所以项目设计的时候，不要对复杂的业务设计模块太频繁的视图切换。尽量将静态内容和动态内容分离到不同的模块中。<br><br>一般来说，v-if 有更高的切换消耗而 v-show 有更高的初始渲染消耗。因此，如果需要频繁切换 v-show 较好，如果在运行时条件不大可能改变 v-if 较好</p>
+</li>
+</ul>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ul>
+<li>font-zize:0(给inline、inline-block元素的父元素设置) 解决inline、inline-block元素之间的间距<br><br>我们为了页面代码的整洁可读性，往往会设置一些适当的缩进、换行，但当元素的display为inline或者inline-block的时候，这些缩进、换行就会产生空白</li>
+</ul>
+<h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3><ul>
+<li><code>document.defaultView</code><br><br>属性返回当前document对象关联的window对象，如果没有，会返回null。IE9以下不支持。基本上用<code>window.getComputedStyle()</code>就可以了，只有一种情况必须用<code>defaultView</code>，就是firefox3.6上访问子框架内的样式(iframe)</li>
+<li><code>window.getComputedStyle</code><br><br>是一个可以获取当前元素所有最终使用的CSS属性值。返回的是一个CSS样式声明对象([object CSSStyleDeclaration])，只读。<br><br>语法：<code>var style = window.getComputedStyle(&quot;元素&quot;, &quot;伪类&quot;)</code>;<br><br>如果是伪类元素需要传递第二个参数，不是则传递null</li>
+<li><code>element.currentStyle</code><br><br><code>currentStyle</code>是IE浏览器自娱自乐的一个属性，其与<code>element.style</code>可以说是近亲，至少在使用形式上类似，<code>element.currentStyle</code>，差别在于<code>element.currentStyle</code>返回的是元素当前应用的最终CSS属性值（包括外链CSS文件，页面中嵌入的<style>属性等）。</li>
+<li><code>element.scrollTop</code> 属性可以设置或者获取一个元素被卷起的像素距离。一个元素的 scrollTop 是可以去计算出这个元素最高高度距离它容器顶部的可见高度。当一个元素的容器没有产生垂直方向的滚动条,那它的 scrollTop 的值默认为0.</li>
+<li>冒泡(默认)false与捕获true<br>1.一种事件触发方式 <br><br>冒泡：子元素先触发冒泡，父元素次之。捕获：父元素先触发捕获，子元素次之<br>2.两种事件触发方式混合<br><br>点击子元素：父元素捕获–&gt;子元素冒泡–&gt;子元素捕获–&gt;父元素冒泡<br><br>点击父元素：父元素冒泡–&gt;父元素捕获</li>
+<li><a href="http://www.cnblogs.com/ziyunfei/p/5545439.html">addEventLister passive:true</a>可以移动端解决滚动和触摸事件的卡顿</li>
+<li><a href="http://www.cnblogs.com/caizhenbo/p/6679478.html">DOMContentLoaded与load事件的区别</a></li>
+</ul>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><ul>
+<li>fastclick.js 处理移动端click事件300毫秒延迟<br>1.为什么存在延迟<br><br>从点击屏幕上的元素到触发元素的click事件，移动浏览器会有大约300毫秒的等待时间。为什么这么设计？因为它想想看看你是不是要进行双击（double tap）操作。<br>2.不应用fastclick的场景<br>a.桌面浏览器<br>b.如果viewport meta标签中设置了 width=device-width，Android上的Chrome32+会禁用300ms延迟<br><meta name='viewport' content='width=device-width,initial-scale=1'><br>c.viewport meta 标签如果设置了user-scalable=no,Android上的Chrome(所有版本)都会禁用300ms延迟。<br>d.IE10中，可以使用css属性 -ms-touch-action:none  禁止元素双击缩放</li>
+<li>showdown.js 一个javascript环境下markdown语法解释工具</li>
+</ul>
+<h3 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h3><ul>
+<li>需要系统学习一下svg</li>
+<li>强化一下flex布局</li>
+</ul>
+<!-- title: 标签测试文章
+tags:
+  - Testing
+  - Another Tag
+--- --></style></li></ul>
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/微信二维码.jpg" alt="Joyeux wechat" style="width: 200px; max-width: 100%;"/>
+    <div>加我微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信收钱码.jpg" alt="Joyeux 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝收钱码.jpg" alt="Joyeux 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/微信二维码.jpg" alt="Joyeux 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/02/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Joyeux</p>
+              <p class="site-description motion-element" itemprop="description">太卑微，就努力踮起脚尖</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yourname@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#技术栈"><span class="nav-number">1.</span> <span class="nav-text">技术栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue知识点"><span class="nav-number">3.</span> <span class="nav-text">vue知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">4.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS"><span class="nav-number">5.</span> <span class="nav-text">JS</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joyeux</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
