@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="笔记," />
 
 
 
@@ -125,21 +125,22 @@
 
 
 
-<meta name="description" content="引用文字语法可选参数：[author[, source]] [link] [source_link_title] [author[source]] [link] [source_link_title] 无参示例我永远相信只要永不放弃，我们还是有机会的。最后，我们还是坚信一点，这世界上只要有梦想，只要不断努力，只要不断学习，不管你长得如何，不管是这样，还是那样，男人的长相往往和他的的才华成反比。今天">
-<meta name="keywords" content="hexo">
+<meta name="description" content="页面渲染概念浏览器渲染引擎的主要目的就是从一个网页的URL开始，经过一系列的复杂处理过程之后，变成一个可视化的结果，这一过程就是这里所说的页面渲染的基本过程。所谓的渲染，就是根据描述或者定义构建数学模型，通过模型生成图像的过程。浏览器的渲染引擎就是能够将HTML/CSS/JavaScript转换成图像结果的模块，如下图所示，输入是URL对应的各种资源，输出是可视化的图像。从这里看，非常的简单和容易">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo之标签插件">
-<meta property="og:url" content="http://yoursite.com/2017/06/05/next之标签/index.html">
+<meta property="og:title" content="HTML页面渲染过程分析">
+<meta property="og:url" content="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/index.html">
 <meta property="og:site_name" content="码圈">
-<meta property="og:description" content="引用文字语法可选参数：[author[, source]] [link] [source_link_title] [author[source]] [link] [source_link_title] 无参示例我永远相信只要永不放弃，我们还是有机会的。最后，我们还是坚信一点，这世界上只要有梦想，只要不断努力，只要不断学习，不管你长得如何，不管是这样，还是那样，男人的长相往往和他的的才华成反比。今天">
+<meta property="og:description" content="页面渲染概念浏览器渲染引擎的主要目的就是从一个网页的URL开始，经过一系列的复杂处理过程之后，变成一个可视化的结果，这一过程就是这里所说的页面渲染的基本过程。所谓的渲染，就是根据描述或者定义构建数学模型，通过模型生成图像的过程。浏览器的渲染引擎就是能够将HTML/CSS/JavaScript转换成图像结果的模块，如下图所示，输入是URL对应的各种资源，输出是可视化的图像。从这里看，非常的简单和容易">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/2.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/06/05/next之标签/images/next-标签.jpg">
-<meta property="og:updated_time" content="2017-11-08T05:50:32.890Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/images/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/images/2.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/images/3.png">
+<meta property="og:updated_time" content="2018-01-09T08:04:21.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo之标签插件">
-<meta name="twitter:description" content="引用文字语法可选参数：[author[, source]] [link] [source_link_title] [author[source]] [link] [source_link_title] 无参示例我永远相信只要永不放弃，我们还是有机会的。最后，我们还是坚信一点，这世界上只要有梦想，只要不断努力，只要不断学习，不管你长得如何，不管是这样，还是那样，男人的长相往往和他的的才华成反比。今天">
-<meta name="twitter:image" content="http://yoursite.com/images/2.jpg">
+<meta name="twitter:title" content="HTML页面渲染过程分析">
+<meta name="twitter:description" content="页面渲染概念浏览器渲染引擎的主要目的就是从一个网页的URL开始，经过一系列的复杂处理过程之后，变成一个可视化的结果，这一过程就是这里所说的页面渲染的基本过程。所谓的渲染，就是根据描述或者定义构建数学模型，通过模型生成图像的过程。浏览器的渲染引擎就是能够将HTML/CSS/JavaScript转换成图像结果的模块，如下图所示，输入是URL对应的各种资源，输出是可视化的图像。从这里看，非常的简单和容易">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/images/1.png">
 
 
 
@@ -169,13 +170,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/05/next之标签/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/"/>
 
 
 
 
 
-  <title>hexo之标签插件 | 码圈</title>
+  <title>HTML页面渲染过程分析 | 码圈</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -365,12 +366,12 @@
   
   
 
-  <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/next之标签/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/HTML页面渲染过程分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joyeux">
@@ -387,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo之标签插件</h1>
+          <h1 class="post-title" itemprop="name headline">HTML页面渲染过程分析</h1>
         
 
         <div class="post-meta">
@@ -399,8 +400,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T14:54:00+08:00">
-                2017-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-09T10:55:23+08:00">
+                2018-01-09
               </time>
             
 
@@ -422,8 +423,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
                   </a>
                 </span>
 
@@ -440,9 +441,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/05/next之标签/#comments" itemprop="discussionUrl">
+                <a href="/2018/01/09/HTML页面渲染过程分析/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/05/next之标签/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/01/09/HTML页面渲染过程分析/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -450,7 +451,7 @@
 
           
           
-             <span id="/2017/06/05/next之标签/" class="leancloud_visitors" data-flag-title="hexo之标签插件">
+             <span id="/2018/01/09/HTML页面渲染过程分析/" class="leancloud_visitors" data-flag-title="HTML页面渲染过程分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -481,48 +482,31 @@
       
 
       
-        <h3 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><blockquote><p>可选参数：[author[, source]] [link] [source_link_title]</p>
-<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>
-<h4 id="无参示例"><a href="#无参示例" class="headerlink" title="无参示例"></a>无参示例</h4><blockquote><p>我永远相信只要永不放弃，我们还是有机会的。最后，我们还是坚信一点，这世界上只要有梦想，只要不断努力，只要不断学习，不管你长得如何，不管是这样，还是那样，男人的长相往往和他的的才华成反比。今天很残酷，明天更残酷，后天很美好，但绝对大部分是死在明天晚上，所以每个人不要放弃今天。</p>
-</blockquote>
-<h4 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h4><blockquote><p>当你成功的时候，你说的所有话都是真理。</p>
-<footer><strong>马云</strong><cite>阿里巴巴</cite></footer></blockquote>
-<h4 id="作者，链接"><a href="#作者，链接" class="headerlink" title="作者，链接"></a>作者，链接</h4><blockquote><p>很卑微，那就踮起脚尖。</p>
-<footer><strong>@Joyeux</strong><cite><a href="https://Joyeuxman.github.io" target="_blank" rel="external">Joyeuxman.github.io</a></cite></footer></blockquote>
-<h4 id="作者，链接，链接名称"><a href="#作者，链接，链接名称" class="headerlink" title="作者，链接，链接名称"></a>作者，链接，链接名称</h4><blockquote><p>很卑微，那就踮起脚尖。</p>
-<footer><strong>@Joyeux</strong><cite><a href="https://Joyeuxman.github.io" target="_blank" rel="external">个人博客</a></cite></footer></blockquote>
-<h3 id="引用代码块"><a href="#引用代码块" class="headerlink" title="引用代码块"></a>引用代码块</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可选参数：[title] [lang:language] [url] [link text]</div></pre></td></tr></table></figure>
-<h4 id="普通的代码块"><a href="#普通的代码块" class="headerlink" title="普通的代码块"></a>普通的代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&apos;Hello World!&apos;);</div></pre></td></tr></table></figure>
-<h4 id="指定语言"><a href="#指定语言" class="headerlink" title="指定语言"></a>指定语言</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</div></pre></td></tr></table></figure>
-<h4 id="附加说明"><a href="#附加说明" class="headerlink" title="附加说明"></a>附加说明</h4><figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.map(callback[, thisArg])</div></pre></td></tr></table></figure>
-<h4 id="附加说明和网址"><a href="#附加说明和网址" class="headerlink" title="附加说明和网址"></a>附加说明和网址</h4><figure class="highlight plain"><figcaption><span>_.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="external">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">_.compact([0, 1, false, 2, &apos;&apos;, 3]);</div><div class="line">=&gt; [1, 2, 3]</div></pre></td></tr></table></figure>
-<h3 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h3><p>另一种形式的代码块，不同的是它使用三个反引号来包裹。<br><code>[language] [title] [url] [link text] code snippet</code></p>
-<h3 id="Pull-Quote"><a href="#Pull-Quote" class="headerlink" title="Pull Quote"></a>Pull Quote</h3><p>在文章中插入 Pull quote。<br><blockquote class="pullquote [class]"><p>content</p>
-</blockquote></p>
-<h3 id="MD文件引入图片"><a href="#MD文件引入图片" class="headerlink" title="MD文件引入图片"></a>MD文件引入图片</h3><figure class="highlight plain"><figcaption><span>图片位于source/images/2.jpg</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![md语法引入图片](/images/2.jpg)</div></pre></td></tr></table></figure>
-<p><img src="/images/2.jpg" alt="md语法引入图片"></p>
-<h3 id="使用img标签通过相对路径引入Image"><a href="#使用img标签通过相对路径引入Image" class="headerlink" title="使用img标签通过相对路径引入Image"></a>使用img标签通过相对路径引入Image</h3><p>将post_asset_folder选项设置为true，会使md文件与其资源文件夹直接关联起来。<br><figure class="highlight plain"><figcaption><span>图片位于source/_drafts/next值标签/images/next-标签.jpg</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&apos;./images/next-标签.jpg&apos;/&gt;</div></pre></td></tr></table></figure><br><img src="./images/next-标签.jpg"></p>
-<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><p>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性。<br>参数：text url [external] [title]<br><a href="https://www.baidu.com" title="这是什么??? 百度" target="_blank" rel="external">百度一下，你就知道</a></p>
-<h3 id="Include-Code"><a href="#Include-Code" class="headerlink" title="Include Code"></a>Include Code</h3><p>插入<code>source</code>文件夹内的代码文件<br></p>
-<h3 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h3><p>引入其他文章的链接<br><br></p>
-<h3 id="引用资源"><a href="#引用资源" class="headerlink" title="引用资源"></a>引用资源</h3><p>引用文章的资源<br><br><br></p>
-<h3 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h3><p>如果您想在文章中插入Swig标签，可以尝试使用Raw标签，以免解析异常<br>
-content
-</p>
-<!-- ### jsFiddle
-在文章中嵌入 jsFiddle。jsFiddle是一款HTML、CSS、JS在线调试工具
-可选参数：[tabs] [skin] [width] [height]
-<iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/AntBody/138zf8kk/embedded/js,html,css,result/dark" frameborder="0" allowfullscreen></iframe> –&gt;
-<!-- ### Gist
-在文章中嵌入Gist [什么是Gist?](https://www.zhihu.com/question/21343711)
-参数：gist_id [filename]
-<script src="//gist.github.com/199bc1a29687f7ae6da0180836b5354b.js?file=find"></script>
-<h3 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h3><p>在文章中嵌入iframe<br>参数：url [width] [height]<br><iframe src="http://www.baidu.com" width="620" height="400" frameborder="0" allowfullscreen></iframe> –&gt;<br><!-- ### Youtube
-在文章中插入 Youtube 视频。
-参数：video_id
-<div class="video-container"><iframe src="//www.youtube.com/embed/ICkxRE_GdgI" frameborder="0" allowfullscreen></iframe></div></p>
-<h3 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h3><p>在文章中插入Vimeo视频<br>参数：video_id<br><div class="video-container"><iframe src="//player.vimeo.com/video/180916725" frameborder="0" allowfullscreen></iframe></div> –&gt;</p>
--->
+        <h4 id="页面渲染概念"><a href="#页面渲染概念" class="headerlink" title="页面渲染概念"></a>页面渲染概念</h4><p>浏览器渲染引擎的主要目的就是从一个网页的URL开始，经过一系列的复杂处理过程之后，变成一个可视化的结果，这一过程就是这里所说的页面渲染的基本过程。<br>所谓的渲染，就是根据描述或者定义构建数学模型，通过模型生成图像的过程。<strong>浏览器的渲染引擎就是能够将HTML/CSS/JavaScript转换成图像结果的模块</strong>，如下图所示，输入是URL对应的各种资源，输出是可视化的图像。从这里看，非常的简单和容易理解。<br><img src="./images/1.png"></p>
+<h4 id="浏览器渲染引擎"><a href="#浏览器渲染引擎" class="headerlink" title="浏览器渲染引擎"></a>浏览器渲染引擎</h4><p>那么渲染引擎提供了哪些功能模块来支持页面渲染的呢？下图是一个渲染引擎所包含的基本功能和它们依赖的一些第三方库。<br><img src="./images/2.png"><br>从图中大致可以看出，一个渲染引擎大致包括HTML解释器，CSS解释器，布局和JavaScript引擎。下面依次来描述它们：<br>HTML解释器：解释HTML语言的解释器，本质是将HTML文本解释成DOM（文档对象模型）树。<br>CSS解释器：解释样式表的解释器，其作用是将DOM中的各个元素对象加上样式信息，从而为计算最后结果的布局提供依据。<br>布局：DOM之后，需要将其中的元素对象同样式信息结合起来，计算它们的大小位置等布局信息，形成一个能够表示这所有信息的内部表示模型。<br>JavaScript引擎：JavaScript可以修改网页的内容，也能修改CSS的信息，JavaScript引擎解释JavaScript代码并把代码的逻辑和对DOM和CSS的改动信息应用到布局中去，从而改变渲染的结果。<br>这些模块依赖很多其他的基础模块，这其中包括网络，存储，2D/3D图形，音频视频和图片解码器等。实际上，渲染引擎中还应该包括如何使用这些依赖模块的部分，这部分的工作其实并不少，因为需要使用它们来高效的渲染网页。例如，利用2D/3D图形库来实现高性能的网页绘制和网页的3D渲染，这个实现非常非常的复杂。最后，当然，在最下面，依然少不了操作系统的支持，例如线程支持，文件支持等等。</p>
+<h4 id="页面渲染基本过程"><a href="#页面渲染基本过程" class="headerlink" title="页面渲染基本过程"></a>页面渲染基本过程</h4><h5 id="绘制-painting"><a href="#绘制-painting" class="headerlink" title="绘制(painting)"></a>绘制(painting)</h5><ol>
+<li>根据HTML代码形成文档对象模型（DOM）。</li>
+<li>加载并解析样式，形成CSS对象模型。</li>
+<li>在文档对象模型和CSS对象模型之上，创建一棵由一组待生成渲染的对象组成的渲染树（在Webkit中这些对象被称为渲染器或渲染对象，而在Gecko中称之为“frame”。）渲染树反映了文档对象模型的结构，但是不包含诸如标签或含有display:none属性的不可见元素。在渲染树中，每一段文本字符串都表现为独立的渲染器。每一个渲染对象都包含与之对应的DOM对象，或者文本块，还加上计算过的样式。换言之，渲染树是一个文档对象模型的直观展示。</li>
+<li>对渲染树上的每个元素，计算它的坐标，称之为布局。浏览器采用一种流方法，布局一个元素只需通过一次，但是表格元素需要通过多次。</li>
+<li>渲染树上的元素最终展示在浏览器里，这一过程称为绘制(painting)。</li>
+<li>当用户与网页交互，或者脚本程序改动修改网页时，前文提到的一些操作将会重复执行，因为网页的内在结构已经发生了改变。</li>
+</ol>
+<h5 id="重绘-repaint"><a href="#重绘-repaint" class="headerlink" title="重绘(repaint)"></a>重绘(repaint)</h5><p>当改变那些不会影响元素在网页中的位置的元素样式时，譬如background-color(背景色)， border-color(边框色)， visibility(可见性)，浏览器只会用新的样式将元素重绘一次(这就是重绘，或者说重新构造样式)。</p>
+<h5 id="重排-reflow"><a href="#重排-reflow" class="headerlink" title="重排(reflow)"></a>重排(reflow)</h5><p>当改变影响到文本内容或结构，或者元素位置时，重排或者说重新布局就会发生。这些改变通常由以下事件触发：</p>
+<ul>
+<li>DOM操作（元素添加、删除、修改或者元素顺序的改变）；</li>
+<li>内容变化，包括表单域内的文本改变；</li>
+<li>CSS属性的计算或改变；</li>
+<li>添加或删除样式表；</li>
+<li>更改“类”的属性；</li>
+<li>浏览器窗口的操作（缩放，滚动）；</li>
+<li>伪类激活（悬停）。 </li>
+</ul>
+<h4 id="渲染引擎核心过程"><a href="#渲染引擎核心过程" class="headerlink" title="渲染引擎核心过程"></a>渲染引擎核心过程</h4><p>下面就是这些模块如何组织以达成渲染过程的。一般地，一个典型的渲染过程下图所示，这是渲染引擎的核心过程，<br><img src="./images/3.png"><br>下面逐个从左至右来解释上图中的这一过程。这一过程的先后关系由图中的实线箭头表示。左上角开始，首先是网页内容，送到HTML解释器。HTML解释器在解释它后形成DOM树，中间如果遇到JavaScript代码则交给JavaScript引擎去处理。如果页面包含CSS，则交给CSS解释器去解析。当DOM建立的时候，接受来自CSS解释的样式信息，构建一个新的内部绘图模型。该模型由布局模块计算模型内部的各个元素的位置和大小信息，最后由绘图模块完成从该模型到图像的绘制。<br>最后解释图中虚线箭头的指向含义。它们表示在渲染过程中，每个阶段可能使用到的其他模块。在网页内容的下载中，需要使用到网络和存储，这个是显而易见地。但计算布局和绘图的时候，需要使用2D/3D的图形模块，同时因为要生成最后的可视化结果，这时候需要开始解码音频视频和图片，同其它内容一起绘制到最后的图像中。<br>在渲染完成之后，用户可能需要跟渲染的结果进行交互，或者网页自身有动画，一般而言，这会持续的重新渲染过程。这个过程跟上面类似，不再赘述。</p>
+<h4 id="document-ready和window-onload事件"><a href="#document-ready和window-onload事件" class="headerlink" title="document.ready和window.onload事件"></a>document.ready和window.onload事件</h4><p>doucument.ready事件由jQuery包装处理，在DOM结构加载完毕(不含图片、CSS等资源)之后触发。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 方式一 --&gt;</div><div class="line">$(function()&#123;</div><div class="line">  alert(&apos;DOM结构加载完毕，不含图片、CSS等资源&apos;);</div><div class="line">&#125;)</div><div class="line">&lt;!-- 方式二 --&gt;</div><div class="line">$(document).ready(function () &#123;</div><div class="line">  alert(&apos;DOM结构加载完毕，不含图片、CSS等资源&apos;);</div><div class="line">&#125;)</div><div class="line">&lt;!-- 方式三 --&gt;</div><div class="line">$().ready(function () &#123;</div><div class="line">  alert(&apos;DOM结构加载完毕，不含图片、CSS等资源&apos;);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>window.onload事件为原生JS事件，在DOM结构完全加载完毕(包含图片、CSS等资源)之后触发。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">window.onload = function () &#123;</div><div class="line">   alert(&apos;页面资源加载完毕，包含图片、CSS资源&apos;);</div><div class="line"> &#125;</div></pre></td></tr></table></figure><br>显而易见，document.ready事件早于window.onload事件。以下是一个例子，便于对其的理解。代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"></div></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -581,7 +565,7 @@ content
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
         </div>
       
@@ -594,14 +578,18 @@ content
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/25/reading-note-1/" rel="next" title="JavaScript设计者模式(张容铭)">
+                <i class="fa fa-chevron-left"></i> JavaScript设计者模式(张容铭)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/05/vue/" rel="prev" title="模仿vue-elm项目心得">
-                模仿vue-elm项目心得 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/09/JS异步加载/" rel="prev" title="JS异步加载浅析">
+                JS异步加载浅析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -799,7 +787,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用文字"><span class="nav-number">1.</span> <span class="nav-text">引用文字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无参示例"><span class="nav-number">1.2.</span> <span class="nav-text">无参示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作者"><span class="nav-number">1.3.</span> <span class="nav-text">作者</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作者，链接"><span class="nav-number">1.4.</span> <span class="nav-text">作者，链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作者，链接，链接名称"><span class="nav-number">1.5.</span> <span class="nav-text">作者，链接，链接名称</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用代码块"><span class="nav-number">2.</span> <span class="nav-text">引用代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-1"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#普通的代码块"><span class="nav-number">2.2.</span> <span class="nav-text">普通的代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定语言"><span class="nav-number">2.3.</span> <span class="nav-text">指定语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附加说明"><span class="nav-number">2.4.</span> <span class="nav-text">附加说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附加说明和网址"><span class="nav-number">2.5.</span> <span class="nav-text">附加说明和网址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反引号代码块"><span class="nav-number">3.</span> <span class="nav-text">反引号代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pull-Quote"><span class="nav-number">4.</span> <span class="nav-text">Pull Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MD文件引入图片"><span class="nav-number">5.</span> <span class="nav-text">MD文件引入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用img标签通过相对路径引入Image"><span class="nav-number">6.</span> <span class="nav-text">使用img标签通过相对路径引入Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Link"><span class="nav-number">7.</span> <span class="nav-text">Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Include-Code"><span class="nav-number">8.</span> <span class="nav-text">Include Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用文章"><span class="nav-number">9.</span> <span class="nav-text">引用文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用资源"><span class="nav-number">10.</span> <span class="nav-text">引用资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Raw"><span class="nav-number">11.</span> <span class="nav-text">Raw</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#页面渲染概念"><span class="nav-number">1.</span> <span class="nav-text">页面渲染概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器渲染引擎"><span class="nav-number">2.</span> <span class="nav-text">浏览器渲染引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面渲染基本过程"><span class="nav-number">3.</span> <span class="nav-text">页面渲染基本过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#绘制-painting"><span class="nav-number">3.1.</span> <span class="nav-text">绘制(painting)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重绘-repaint"><span class="nav-number">3.2.</span> <span class="nav-text">重绘(repaint)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重排-reflow"><span class="nav-number">3.3.</span> <span class="nav-text">重排(reflow)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染引擎核心过程"><span class="nav-number">4.</span> <span class="nav-text">渲染引擎核心过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-ready和window-onload事件"><span class="nav-number">5.</span> <span class="nav-text">document.ready和window.onload事件</span></a></li></ol></div>
             
 
           </div>
@@ -989,9 +977,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/06/05/next之标签/';
-          this.page.identifier = '2017/06/05/next之标签/';
-          this.page.title = 'hexo之标签插件';
+          this.page.url = 'http://yoursite.com/2018/01/09/HTML页面渲染过程分析/';
+          this.page.identifier = '2018/01/09/HTML页面渲染过程分析/';
+          this.page.title = 'HTML页面渲染过程分析';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://芒果.disqus.com/embed.js';

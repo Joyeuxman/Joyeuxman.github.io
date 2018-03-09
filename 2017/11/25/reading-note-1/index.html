@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="笔记," />
 
 
 
@@ -125,16 +125,18 @@
 
 
 
-<meta name="description" content="太卑微，就努力踮起脚尖">
-<meta property="og:type" content="website">
-<meta property="og:title" content="码圈">
-<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
+<meta name="description" content="问答通过this添加的属性和方法和同在prototype添加的属性和方法有什么不同? 通过this添加的属性和方法是在当前对象上添加的，然而JavaScript是一种基于原型prototype的语言，所以每创建一个对象(当然在JavaScript中函数也是一种对象)，它都有一个原型prototype用于指向其继承的属性、方法。这样通过prototype继承的方法和属性并不是对象自身的，所以在使用这">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript设计者模式(张容铭)">
+<meta property="og:url" content="http://yoursite.com/2017/11/25/reading-note-1/index.html">
 <meta property="og:site_name" content="码圈">
-<meta property="og:description" content="太卑微，就努力踮起脚尖">
+<meta property="og:description" content="问答通过this添加的属性和方法和同在prototype添加的属性和方法有什么不同? 通过this添加的属性和方法是在当前对象上添加的，然而JavaScript是一种基于原型prototype的语言，所以每创建一个对象(当然在JavaScript中函数也是一种对象)，它都有一个原型prototype用于指向其继承的属性、方法。这样通过prototype继承的方法和属性并不是对象自身的，所以在使用这">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-25T08:15:14.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="码圈">
-<meta name="twitter:description" content="太卑微，就努力踮起脚尖">
+<meta name="twitter:title" content="JavaScript设计者模式(张容铭)">
+<meta name="twitter:description" content="问答通过this添加的属性和方法和同在prototype添加的属性和方法有什么不同? 通过this添加的属性和方法是在当前对象上添加的，然而JavaScript是一种基于原型prototype的语言，所以每创建一个对象(当然在JavaScript中函数也是一种对象)，它都有一个原型prototype用于指向其继承的属性、方法。这样通过prototype继承的方法和属性并不是对象自身的，所以在使用这">
 
 
 
@@ -164,13 +166,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/06/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/25/reading-note-1/"/>
 
 
 
 
 
-  <title>归档 | 码圈</title>
+  <title>JavaScript设计者模式(张容铭) | 码圈</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -217,7 +219,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -351,74 +353,264 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/reading-note-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joyeux">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码圈">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">JavaScript设计者模式(张容铭)</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T15:57:57+08:00">
+                2017-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 7 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/25/reading-note-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/25/reading-note-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/11/25/reading-note-1/" class="leancloud_visitors" data-flag-title="JavaScript设计者模式(张容铭)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/05/next之标签/" itemprop="url">
-              
-                <span itemprop="name">hexo之标签插件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-05T14:54:00+08:00"
-              content="2017-06-05" >
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h3 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h3><p></p><p>通过this添加的属性和方法和同在prototype添加的属性和方法有什么不同?</p><p></p>
+<p></p><p>通过this添加的属性和方法是在当前对象上添加的，然而JavaScript是一种基于原型prototype的语言，所以每创建一个对象(当然在JavaScript中函数也是一种对象)，它都有一个原型prototype用于指向其继承的属性、方法。这样通过prototype继承的方法和属性并不是对象自身的，所以在使用这些方法时，需要通过prototype一级一级查找来得到。这样你会发现通过this定义的属性和方法是该对象自身拥有的，所以我们每次通过类创建一个新对象时，this指向的属性和方法都会得到相应的创建，而通过prototype继承的属性或者方法时每个对象通过prototype访问到，所以我们每次通过类创建一个新对象时这些属性和方法不会再次创建。</p>
+
+      
     </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/微信二维码.jpg" alt="Joyeux wechat" style="width: 200px; max-width: 100%;"/>
+    <div>加我微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信收钱码.jpg" alt="Joyeux 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝收钱码.jpg" alt="Joyeux 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/微信二维码.jpg" alt="Joyeux 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/05/vue/" rel="next" title="模仿vue-elm项目心得">
+                <i class="fa fa-chevron-left"></i> 模仿vue-elm项目心得
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/09/HTML页面渲染过程分析/" rel="prev" title="HTML页面渲染过程分析">
+                HTML页面渲染过程分析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -426,6 +618,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -446,8 +652,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,6 +751,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问答"><span class="nav-number">1.</span> <span class="nav-text">问答</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -696,6 +927,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -713,6 +948,18 @@
       <script id="dsq-count-scr" src="https://芒果.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/11/25/reading-note-1/';
+          this.page.identifier = '2017/11/25/reading-note-1/';
+          this.page.title = 'JavaScript设计者模式(张容铭)';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://芒果.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
