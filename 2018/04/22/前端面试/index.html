@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="笔记," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="码圈" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="CSS盒模型CSS盒模型的基本概念和分类CSS盒模型从内至外依次是content、padding、border、margin区域。分为标准盒模型和IE盒模型 标准盒模型标准盒子模型： 题目：谈一谈你对CSS盒模型的认识专业的面试，一定会问 CSS 盒模型。对于这个题目，我们要回答一下几个方面： （1）基本概念：content、padding、margin。 （2）标准盒模型、IE盒模型的区别。不要">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试/index.html">
+<meta property="og:site_name" content="码圈">
+<meta property="og:description" content="CSS盒模型CSS盒模型的基本概念和分类CSS盒模型从内至外依次是content、padding、border、margin区域。分为标准盒模型和IE盒模型 标准盒模型标准盒子模型： 题目：谈一谈你对CSS盒模型的认识专业的面试，一定会问 CSS 盒模型。对于这个题目，我们要回答一下几个方面： （1）基本概念：content、padding、margin。 （2）标准盒模型、IE盒模型的区别。不要">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7sby7r.com1.z0.glb.clouddn.com/2015-10-03-css-27.jpg">
+<meta property="og:image" content="http://7sby7r.com1.z0.glb.clouddn.com/2015-10-03-css-30.jpg">
+<meta property="og:image" content="http://img.smyhvae.com/20170805_0904.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180305_2216.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180305_2217.png">
+<meta property="og:image" content="http://img.smyhvae.com/20170806_1537.png">
+<meta property="og:image" content="http://img.smyhvae.com/20170806_1544.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180306_0825.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180306_0827.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180306_0840.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180306_0845.png">
+<meta property="og:image" content="http://img.smyhvae.com/2016040102.jpg">
+<meta property="og:updated_time" content="2018-04-22T07:30:09.787Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端面试">
+<meta name="twitter:description" content="CSS盒模型CSS盒模型的基本概念和分类CSS盒模型从内至外依次是content、padding、border、margin区域。分为标准盒模型和IE盒模型 标准盒模型标准盒子模型： 题目：谈一谈你对CSS盒模型的认识专业的面试，一定会问 CSS 盒模型。对于这个题目，我们要回答一下几个方面： （1）基本概念：content、padding、margin。 （2）标准盒模型、IE盒模型的区别。不要">
+<meta name="twitter:image" content="http://7sby7r.com1.z0.glb.clouddn.com/2015-10-03-css-27.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/22/前端面试/"/>
+
+
+
+
+
+  <title>前端面试 | 码圈</title>
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '[object Object]',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9f1f88f0603934b20e3be628b882a667";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">码圈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">太卑微，就努力踮起脚尖</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/前端面试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joyeux">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码圈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端面试</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T14:03:33+08:00">
+                2018-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/22/前端面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/04/22/前端面试/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/04/22/前端面试/" class="leancloud_visitors" data-flag-title="前端面试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h4><h3 id="CSS盒模型的基本概念和分类"><a href="#CSS盒模型的基本概念和分类" class="headerlink" title="CSS盒模型的基本概念和分类"></a>CSS盒模型的基本概念和分类</h3><p>CSS盒模型从内至外依次是content、padding、border、margin区域。<br>分为标准盒模型和IE盒模型</p>
+<h4 id="标准盒模型"><a href="#标准盒模型" class="headerlink" title="标准盒模型"></a>标准盒模型</h4><p>标准盒子模型：</p>
+<h2 id="题目：谈一谈你对CSS盒模型的认识"><a href="#题目：谈一谈你对CSS盒模型的认识" class="headerlink" title="题目：谈一谈你对CSS盒模型的认识"></a>题目：谈一谈你对CSS盒模型的认识</h2><p>专业的面试，一定会问 CSS 盒模型。对于这个题目，我们要回答一下几个方面：</p>
+<p>（1）基本概念：content、padding、margin。</p>
+<p>（2）标准盒模型、IE盒模型的区别。不要漏说了IE盒模型，通过这个问题，可以筛选一部分人。</p>
+<p>（3）CSS如何设置这两种模型（即：如何设置某个盒子为其中一个模型）？如果回答了上面的第二条，还会继续追问这一条。</p>
+<p>（4）JS如何设置、获取盒模型对应的宽和高？这一步，已经有很多人答不上来了。</p>
+<p>（5）实例题：根据盒模型解释<strong>边距重叠</strong>。</p>
+<p>前四个方面是逐渐递增，第五个方面，却鲜有人知。</p>
+<p>（6）BFC（边距重叠解决方案）或IFC。</p>
+<p>如果能回答第五条，就会引出第六条。BFC是面试频率较高的。</p>
+<p><strong>总结</strong>：以上几点，从上到下，知识点逐渐递增，知识面从理论、CSS、JS，又回到CSS理论。</p>
+<p>接下来，我们把上面的六条，依次讲解。</p>
+<h2 id="标准盒模型和IE盒子模型"><a href="#标准盒模型和IE盒子模型" class="headerlink" title="标准盒模型和IE盒子模型"></a>标准盒模型和IE盒子模型</h2><p>标准盒子模型：</p>
+<p><img src="http://7sby7r.com1.z0.glb.clouddn.com/2015-10-03-css-27.jpg" alt=""></p>
+<p>IE盒子模型：</p>
+<p><img src="http://7sby7r.com1.z0.glb.clouddn.com/2015-10-03-css-30.jpg" alt=""></p>
+<p>上图显示：</p>
+<p>在 CSS 盒子模型 (Box Model) 规定了元素处理元素的几种方式：</p>
+<ul>
+<li>width和height：<strong>内容</strong>的宽度、高度（不是盒子的宽度、高度）。</li>
+<li>padding：内边距。</li>
+<li>border：边框。</li>
+<li>margin：外边距。</li>
+</ul>
+<p>CSS盒模型和IE盒模型的区别：</p>
+<ul>
+<li><p>在 <font color="#0000FF"><strong>标准盒子模型</strong></font>中，<font color="#0000FF"><strong>width 和 height 指的是内容区域</strong></font>的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。</p>
+</li>
+<li><p><font color="#0000FF"><strong>IE盒子模型</strong></font>中，<font color="#0000FF"><strong>width 和 height 指的是内容区域+border+padding</strong></font>的宽度和高度。</p>
+</li>
+</ul>
+<h2 id="CSS如何设置这两种模型"><a href="#CSS如何设置这两种模型" class="headerlink" title="CSS如何设置这两种模型"></a>CSS如何设置这两种模型</h2><p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 设置当前盒子为 标准盒模型（默认） */</span></div><div class="line">box-sizing: content-box;</div><div class="line"></div><div class="line"><span class="comment">/* 设置当前盒子为 IE盒模型 */</span></div><div class="line">box-sizing: border-box;</div></pre></td></tr></table></figure>
+<p>备注：盒子默认为标准盒模型。</p>
+<h2 id="JS如何设置、获取盒模型对应的宽和高"><a href="#JS如何设置、获取盒模型对应的宽和高" class="headerlink" title="JS如何设置、获取盒模型对应的宽和高"></a>JS如何设置、获取盒模型对应的宽和高</h2><h3 id="方式一：通过DOM节点的-style-样式获取"><a href="#方式一：通过DOM节点的-style-样式获取" class="headerlink" title="方式一：通过DOM节点的 style 样式获取"></a>方式一：通过DOM节点的 style 样式获取</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.style.width/height;</div></pre></td></tr></table></figure>
+<p>缺点：通过这种方式，只能获取<strong>行内样式</strong>，不能获取<code>内嵌</code>的样式和<code>外链</code>的样式。</p>
+<p>这种方式有局限性，但应该了解。</p>
+<h3 id="方式二（通用型）"><a href="#方式二（通用型）" class="headerlink" title="方式二（通用型）"></a>方式二（通用型）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.getComputedStyle(element).width/height;</div></pre></td></tr></table></figure>
+<p>方式二能兼容 Chrome、火狐。是通用型方式。</p>
+<h3 id="方式三（IE独有的）"><a href="#方式三（IE独有的）" class="headerlink" title="方式三（IE独有的）"></a>方式三（IE独有的）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.currentStyle.width/height;</div></pre></td></tr></table></figure>
+<p>和方式二相同，但这种方式只有IE独有。获取到的即时运行完之后的宽高（三种css样式都可以获取）。</p>
+<h3 id="方式四"><a href="#方式四" class="headerlink" title="方式四"></a>方式四</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.getBoundingClientRect().width/height;</div></pre></td></tr></table></figure>
+<p>此 api 的作用是：获取一个元素的绝对位置。绝对位置是视窗 viewport 左上角的绝对位置。</p>
+<p>此 api 可以拿到四个属性：left、top、width、height。</p>
+<p><strong>总结：</strong></p>
+<p>上面的四种方式，要求能说出来区别，以及哪个的通用型更强。</p>
+<h2 id="margin塌陷-margin重叠"><a href="#margin塌陷-margin重叠" class="headerlink" title="margin塌陷/margin重叠"></a>margin塌陷/margin重叠</h2><p><strong>标准文档流中，竖直方向的margin不叠加，只取较大的值作为margin</strong>(水平方向的margin是可以叠加的，即水平方向没有塌陷现象)。</p>
+<p>PS：如果不在标准流，比如盒子都浮动了，那么两个盒子之间是没有margin重叠的现象的。</p>
+<p>我们来看几个例子。</p>
+<h3 id="兄弟元素之间"><a href="#兄弟元素之间" class="headerlink" title="兄弟元素之间"></a>兄弟元素之间</h3><p>如下图所示：</p>
+<p><img src="http://img.smyhvae.com/20170805_0904.png" alt=""></p>
+<h3 id="子元素和父元素之间"><a href="#子元素和父元素之间" class="headerlink" title="子元素和父元素之间"></a>子元素和父元素之间</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        * &#123;</span></div><div class="line"><span class="undefined">            margin: 0;</span></div><div class="line"><span class="undefined">            padding: 0;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        .father &#123;</span></div><div class="line"><span class="undefined">            background: green;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        /* 给儿子设置margin-top为10像素 */</span></div><div class="line"><span class="undefined">        .son &#123;</span></div><div class="line"><span class="undefined">            height: 100px;</span></div><div class="line"><span class="undefined">            margin-top: 10px;</span></div><div class="line"><span class="undefined">            background: red;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面的代码中，儿子的height是 100px，magin-top 是10px。注意，此时父亲的 height 是100，而不是110。因为儿子和父亲在竖直方向上，共一个margin。</p>
+<p>儿子这个盒子：</p>
+<p><img src="http://img.smyhvae.com/20180305_2216.png" alt=""></p>
+<p>父亲这个盒子：</p>
+<p><img src="http://img.smyhvae.com/20180305_2217.png" alt=""></p>
+<p>上方代码中，如果我们给父亲设置一个属性：<code>overflow: hidden</code>，就可以避免这个问题，此时父亲的高度是110px，这个用到的就是BFC（下一段讲解）。</p>
+<h3 id="善于使用父亲的padding，而不是儿子的margin"><a href="#善于使用父亲的padding，而不是儿子的margin" class="headerlink" title="善于使用父亲的padding，而不是儿子的margin"></a>善于使用父亲的padding，而不是儿子的margin</h3><blockquote>
+<p>其实，这一小段讲的内容与上一小段相同，都是讲父子之间的margin重叠。</p>
+</blockquote>
+<p>我们来看一个奇怪的现象。现在有下面这样一个结构：（div中放一个p）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>上面的结构中，我们尝试通过给儿子<code>p</code>一个<code>margin-top:50px;</code>的属性，让其与父亲保持50px的上边距。结果却看到了下面的奇怪的现象：</p>
+<p><img src="http://img.smyhvae.com/20170806_1537.png" alt=""></p>
+<p>此时我们给父亲div加一个border属性，就正常了：</p>
+<p><img src="http://img.smyhvae.com/20170806_1544.png" alt=""></p>
+<p>如果父亲没有border，那么儿子的margin实际上踹的是“流”，踹的是这“行”。所以，父亲整体也掉下来了。</p>
+<p><strong>margin这个属性，本质上描述的是兄弟和兄弟之间的距离； 最好不要用这个marign表达父子之间的距离。</strong></p>
+<p>所以，如果要表达父子之间的距离，我们一定要善于使用父亲的padding，而不是儿子的margin。</p>
+<h2 id="BFC（边距重叠解决方案）"><a href="#BFC（边距重叠解决方案）" class="headerlink" title="BFC（边距重叠解决方案）"></a>BFC（边距重叠解决方案）</h2><h3 id="BFC的概念"><a href="#BFC的概念" class="headerlink" title="BFC的概念"></a>BFC的概念</h3><p>BFC（Block Formatting Context）：块级格式化上下文。你可以把它理解成一个独立的区域。</p>
+<p>另外还有个概念叫IFC。不过，BFC问得更多。</p>
+<h3 id="BFC-的原理-BFC的布局规则【非常重要】"><a href="#BFC-的原理-BFC的布局规则【非常重要】" class="headerlink" title="BFC 的原理/BFC的布局规则【非常重要】"></a>BFC 的原理/BFC的布局规则【非常重要】</h3><p>BFC 的原理，其实也就是 BFC 的渲染规则（能说出以下四点就够了）。包括：</p>
+<ul>
+<li><p>（1）BFC <strong>内部的</strong>子元素，在垂直方向，<strong>边距会发生重叠</strong>。</p>
+</li>
+<li><p>（2）BFC在页面中是独立的容器，外面的元素不会影响里面的元素，反之亦然。（稍后看<code>举例1</code>）</p>
+</li>
+<li><p>（3）<strong>BFC区域不与旁边的<code>float box</code>区域重叠</strong>。（可以用来清除浮动带来的影响）。（稍后看<code>举例2</code>）</p>
+</li>
+<li><p>（4）计算BFC的高度时，浮动的子元素也参与计算。（稍后看<code>举例3</code>）</p>
+</li>
+</ul>
+<h3 id="如何生成BFC"><a href="#如何生成BFC" class="headerlink" title="如何生成BFC"></a>如何生成BFC</h3><p>有以下几种方法：</p>
+<ul>
+<li><p>方法1：overflow: 不为vidible，可以让属性是 hidden、auto。【最常用】</p>
+</li>
+<li><p>方法2：浮动中：float的属性值不为none。意思是，只要设置了浮动，当前元素就创建了BFC。</p>
+</li>
+<li><p>方法3：定位中：只要posiiton的值不是 static或者是relative即可，可以是<code>absolute</code>或<code>fixed</code>，也就生成了一个BFC。</p>
+</li>
+<li><p>方法4：display为inline-block, table-cell, table-caption, flex, inline-flex</p>
+</li>
+</ul>
+<p>参考链接：</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000006740129" target="_blank" rel="external">BFC原理详解</a></li>
+</ul>
+<ul>
+<li><a href="https://www.jianshu.com/p/bf927bc1bed4" target="_blank" rel="external">BFC详解</a></li>
+</ul>
+<ul>
+<li><a href="https://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html" target="_blank" rel="external">前端精选文摘：BFC 神奇背后的原理</a></li>
+</ul>
+<p>下面来看几个例子，看看如何生成BFC。</p>
+<h3 id="BFC-的应用"><a href="#BFC-的应用" class="headerlink" title="BFC 的应用"></a>BFC 的应用</h3><p><strong>举例1：</strong>解决 margin 重叠</p>
+<p>当父元素和子元素发生 margin 重叠时，解决办法：<strong>给子元素或父元素创建BFC</strong>。</p>
+<p>比如说，针对下面这样一个 div 结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面的div结构中，如果父元素和子元素发生margin重叠，我们可以给子元素创建一个 BFC，就解决了：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"son"</span> <span class="attr">style</span>=<span class="string">"overflow: hidden"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>因为<strong>第二条：BFC区域是一个独立的区域，不会影响外面的元素</strong>。</p>
+<p><strong>举例2</strong>：BFC区域不与float区域重叠：</p>
+<p>针对下面这样一个div结构；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        .father-layout &#123;</span></div><div class="line"><span class="undefined">            background: pink;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        .father-layout .left &#123;</span></div><div class="line"><span class="undefined">            float: left;</span></div><div class="line"><span class="undefined">            width: 100px;</span></div><div class="line"><span class="undefined">            height: 100px;</span></div><div class="line"><span class="undefined">            background: green;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        .father-layout .right &#123;</span></div><div class="line"><span class="undefined">            height: 150px;  /*右侧标准流里的元素，比左侧浮动的元素要高*/</span></div><div class="line"><span class="undefined">            background: red;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"father-layout"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span></div><div class="line">        左侧，生命壹号</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span></div><div class="line">        右侧，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://img.smyhvae.com/20180306_0825.png" alt=""></p>
+<p>上图中，由于右侧标准流里的元素，比左侧浮动的元素要高，导致右侧有一部分会跑到左边的下面去。</p>
+<p><strong>如果要解决这个问题，可以将右侧的元素创建BFC</strong>，因为<strong>第三条：BFC区域不与<code>float box</code>区域重叠</strong>。解决办法如下：（将right区域添加overflow属性）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span> <span class="attr">style</span>=<span class="string">"overflow: hidden"</span>&gt;</span></div><div class="line">    右侧，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，smyhvae，</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://img.smyhvae.com/20180306_0827.png" alt=""></p>
+<p>上图表明，解决之后，<code>father-layout</code>的背景色显现出来了，说明问题解决了。</p>
+<p><strong>举例3：</strong>清除浮动</p>
+<p>现在有下面这样的结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        .father &#123;</span></div><div class="line"><span class="undefined">            background: pink;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">        .son &#123;</span></div><div class="line"><span class="undefined">            float: left;</span></div><div class="line"><span class="undefined">            background: green;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span></div><div class="line">        生命壹号</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://img.smyhvae.com/20180306_0840.png" alt=""></p>
+<p>上面的代码中，儿子浮动了，但由于父亲没有设置高度，导致看不到父亲的背景色（此时父亲的高度为0）。正所谓<strong>有高度的盒子，才能关住浮动</strong>。</p>
+<p>如果想要清除浮动带来的影响，方法一是给父亲设置高度，然后采用隔墙法。方法二是 BFC：给父亲增加 <code>overflow=hidden</code>属性即可， 增加之后，效果如下：</p>
+<p><img src="http://img.smyhvae.com/20180306_0845.png" alt=""></p>
+<p>为什么父元素成为BFC之后，就有了高度呢？这就回到了<strong>第四条：计算BFC的高度时，浮动元素也参与计算</strong>。意思是，<strong>在计算BFC的高度时，子元素的float box也会参与计算</strong>。</p>
+<h2 id="我的公众号"><a href="#我的公众号" class="headerlink" title="我的公众号"></a>我的公众号</h2><p>想学习<font color="#0000ff"><strong>代码之外的软技能</strong></font>？不妨关注我的微信公众号：<strong>生命团队</strong>（id：<code>vitateam</code>）。</p>
+<p>扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：</p>
+<p><img src="http://img.smyhvae.com/2016040102.jpg" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/微信二维码.jpg" alt="Joyeux wechat" style="width: 200px; max-width: 100%;"/>
+    <div>加我微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信收钱码.jpg" alt="Joyeux 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝收钱码.jpg" alt="Joyeux 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/微信二维码.jpg" alt="Joyeux 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/10/Media-match插件/" rel="next" title="Media-match插件解析">
+                <i class="fa fa-chevron-left"></i> Media-match插件解析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/22/跨域通信/" rel="prev" title="跨域通信">
+                跨域通信 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Joyeux</p>
+              <p class="site-description motion-element" itemprop="description">太卑微，就努力踮起脚尖</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Joyeuxman" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.douban.com/people/160542237/" target="_blank" title="豆瓣">
+                    
+                      <i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/joyeux-11/activities" target="_blank" title="知乎">
+                    
+                      <i class="fa fa-fw fa-globe"></i>知乎</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS盒模型"><span class="nav-number">1.</span> <span class="nav-text">CSS盒模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS盒模型的基本概念和分类"><span class="nav-number"></span> <span class="nav-text">CSS盒模型的基本概念和分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准盒模型"><span class="nav-number">1.</span> <span class="nav-text">标准盒模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目：谈一谈你对CSS盒模型的认识"><span class="nav-number"></span> <span class="nav-text">题目：谈一谈你对CSS盒模型的认识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准盒模型和IE盒子模型"><span class="nav-number"></span> <span class="nav-text">标准盒模型和IE盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS如何设置这两种模型"><span class="nav-number"></span> <span class="nav-text">CSS如何设置这两种模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS如何设置、获取盒模型对应的宽和高"><span class="nav-number"></span> <span class="nav-text">JS如何设置、获取盒模型对应的宽和高</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一：通过DOM节点的-style-样式获取"><span class="nav-number"></span> <span class="nav-text">方式一：通过DOM节点的 style 样式获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二（通用型）"><span class="nav-number"></span> <span class="nav-text">方式二（通用型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式三（IE独有的）"><span class="nav-number"></span> <span class="nav-text">方式三（IE独有的）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式四"><span class="nav-number"></span> <span class="nav-text">方式四</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#margin塌陷-margin重叠"><span class="nav-number"></span> <span class="nav-text">margin塌陷/margin重叠</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#兄弟元素之间"><span class="nav-number"></span> <span class="nav-text">兄弟元素之间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子元素和父元素之间"><span class="nav-number"></span> <span class="nav-text">子元素和父元素之间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#善于使用父亲的padding，而不是儿子的margin"><span class="nav-number"></span> <span class="nav-text">善于使用父亲的padding，而不是儿子的margin</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC（边距重叠解决方案）"><span class="nav-number"></span> <span class="nav-text">BFC（边距重叠解决方案）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC的概念"><span class="nav-number"></span> <span class="nav-text">BFC的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-的原理-BFC的布局规则【非常重要】"><span class="nav-number"></span> <span class="nav-text">BFC 的原理/BFC的布局规则【非常重要】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何生成BFC"><span class="nav-number"></span> <span class="nav-text">如何生成BFC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-的应用"><span class="nav-number"></span> <span class="nav-text">BFC 的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的公众号"><span class="nav-number"></span> <span class="nav-text">我的公众号</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joyeux</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://芒果.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/04/22/前端面试/';
+          this.page.identifier = '2018/04/22/前端面试/';
+          this.page.title = '前端面试';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://芒果.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("RILqUpQDWOWFGfCi02JSDeHW-gzGzoHsz", "6Bc3TEeLSa6D64aGJQ92BjuC");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
